@@ -55,20 +55,20 @@ function getProductInfo(paintColor) {
             price = '$21.98';
             break;
         case 'pn6':
-            colorName = 'Solid Yellow';
-            price = '$14.99';
-            break;   
-        case 'pn7':
             colorName = 'Solid Black';
             price = '$4.99';
             break;   
-        case 'pn8':
+        case 'pn7':
             colorName = 'Solid Cyan';
             price = '$8.22';
-            break;   
-        case 'pn9':
+            break; 
+        case 'pn8':
             colorName = 'Solid Purple';
             price = '$11.99';
+            break;   
+        case 'pn9':
+            colorName = 'Solid Yellow';
+            price = '$14.99';
             break;
         default:
             break;             
