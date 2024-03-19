@@ -37,7 +37,7 @@ function getProductInfo(paintColor) {
         case 'pn1':
             colorName = 'Lime Green';
             price = '$14.99';
-            removeOpacity()
+            removeOpacity(paintColor)
             break;           
         case 'pn2':
             colorName = 'Medium Brown';
