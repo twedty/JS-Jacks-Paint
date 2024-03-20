@@ -84,16 +84,12 @@ function getProductInfo(partNumber) {
             updatePrice(colorName, price)
             break;
         default:
-            break;             
+    }
+    function updatePrice(colorName, price) {
+        let colorPrice = document.getElementById('color-price');
+        colorPrice.textContent = price;
+        
+        let color = document.getElementById('color-name');
+        color.textContent = colorName;
     }
 }
-function updatePrice(colorName, price) {
-    let colorPrice = document.getElementById('color-price');
-    colorPrice.textContent = price;
-        
-    let color = document.getElementById('color-name');
-    color.textContent = colorName;
-}   
-
-
-configureListeners()
