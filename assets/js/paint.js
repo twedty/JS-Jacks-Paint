@@ -85,6 +85,7 @@ function getProductInfo(partNumber) {
             break;
         default:
     }
+
     function updatePrice(colorName, price) {
         let colorPrice = document.getElementById('color-price');
         colorPrice.textContent = price;
@@ -93,3 +94,5 @@ function getProductInfo(partNumber) {
         color.textContent = colorName;
     }
 }
+
+configureListeners()
