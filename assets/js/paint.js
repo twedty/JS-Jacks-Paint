@@ -1,17 +1,13 @@
 function configureListeners() {
     const images = document.getElementsByTagName('img')
-    // select img elements  
-
 
     for (const i = 0; i < images.length; i++) {     
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false);
         document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false);
-        // iterate over images and add mouseover event listeners      
     } 
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
     if (!this.classList.contains('dim')){
         this.classList.add('dim')
     }
@@ -19,9 +15,8 @@ function addOpacity(event) {
 }
 
 function removeOpacity(event) {
-     //remove appropriate CSS class
     if (this.classList.contains('dim')){
-        this.classList.remove('dim')
+        this.classList.remove('dim');
     }
 
     let element = document.getElementById('color-price');
@@ -86,13 +81,13 @@ function getProductInfo(partNumber) {
         default:
     }
 
-    function updatePrice(colorName, price) {
+    function updatePrice(colorName, price)
+    {
         let colorPrice = document.getElementById('color-price');
         colorPrice.textContent = price;
         
         let color = document.getElementById('color-name');
         color.textContent = colorName;
     }
+    
 }
-
-configureListeners()
