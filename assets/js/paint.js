@@ -1,11 +1,11 @@
 function configureListeners() {
-    let images = document.querySelectorAll('img')
+    const images = document.getElementsByTagName('img')
     // select img elements  
 
 
     for (const i = 0; i < images.length; i++) {     
-        images[i].addEventListener('mouseover', addOpacity, false);
-        images[i].addEventListener('mouseout', removeOpacity, false);
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false);
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false);
         // iterate over images and add mouseover event listeners      
     } 
 }
@@ -23,7 +23,6 @@ function removeOpacity(event) {
     if (this.classList.contains('dim')){
         this.classList.remove('dim')
     }
-    event.target.classList.remove('opacity');
 
     let element = document.getElementById('color-price');
         element.textContent = '';
@@ -34,11 +33,11 @@ function removeOpacity(event) {
     event.preventDefault();    
 }
 
-function getProductInfo(paintColor) {
+function getProductInfo(partNumber) {
     let price;
     let colorName;  
     
-    switch (paintColor) {
+    switch (partNumber) {
         case 'pn1':
             colorName = 'Lime Green';
             price = '$14.99';
