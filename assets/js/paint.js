@@ -1,7 +1,7 @@
 function configureListeners() {
     const images = document.getElementsByTagName('img')
 
-    for (let i = 0; i < images.length; i++) {     
+    for (const i = 0; i < images.length; i++) {     
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false);
         document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false);
     } 
